@@ -127,7 +127,7 @@ const PortfolioPage = () => {
   <p className="text-base font-semibold text-gray-800">Teacher’s Assistant</p>
   <p className="text-sm text-gray-500">Riphah International University</p>
   <p className="text-sm text-gray-500">Islamabad, Pakistan</p>
-  <p className="text-sm text-gray-400 mb-4">Sep 2024 – Present</p>
+  <p className="text-sm text-gray-400 mb-4">Sep 2024 – May 2025</p>
   
   <ul className="text-sm text-gray-700 list-disc list-inside space-y-1">
     <li>Assisted lead teachers with class schedules.</li>
@@ -173,7 +173,7 @@ const PortfolioPage = () => {
     {certificates.map((cert, idx) => (
       <div
         key={idx}
-        className="bg-white rounded-xl shadow-md hover:shadow-lg p-5 transition-all"
+        className="bg-[#fbfdff] rounded-xl shadow-md hover:shadow-lg p-5 transition-all"
       >
         <h3 className="text-lg font-semibold text-gray-900 ">{cert.title}</h3>
         <p className="text-sm text-gray-700 font-medium mt-1">{cert.provider}</p>
@@ -282,8 +282,10 @@ return (
         <div className="flex-[2]  bg-gradient-to-br from-[#fbfdff] to-[#fbfdff] relative ml-4 z-0 p-12 overflow-hidden">
           <h1 className="text-2xl font-bold">Ayesha Kousar</h1>
           <p className="mt-2 text-sm text-gray-800">
-I’m Ayesha Kousar — a Full Stack Web Developer & AI Engineer who loves blending logic and creativity.
-I build impactful apps, explore intelligent systems, and never stop shipping.          </p>
+I’m Ayesha Kousar
+Full Stack Web Developer & AI Engineer (in the making)
+
+I'm beginning my journey in tech with a solid foundation in web development and AI. Eager to learn, build real-world solutions, and grow into a developer who creates with purpose and precision.        </p>
 
           {/* Dynamic Section */}
           <div className="mt-10">
