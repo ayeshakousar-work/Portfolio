@@ -254,7 +254,7 @@ return (
 <div className="flex-[1] ml-8 flex-shrink-0 bg-gradient-to-br from-[#0e2e2e] to-[#074141] text-white relative z-10 h-[500px]">
           <div className="p-6 flex flex-col items-center space-y-6">
             <img
-              src="/me.jpg"
+              src="/new.PNG"
               alt="Profile"
               className="w-28 h-28 rounded-full border-4 border-cyan-400 shadow-lg"
             />
@@ -282,8 +282,8 @@ return (
         <div className="flex-[2]  bg-gradient-to-br from-[#fbfdff] to-[#fbfdff] relative ml-4 z-0 p-12 overflow-hidden">
           <h1 className="text-2xl font-bold">Ayesha Kousar</h1>
           <p className="mt-2 text-sm text-gray-800">
-           I’m a motivated and adaptable Web Developer & AI Engineer with a strong passion for technology, creativity, and problem solving. I specialize in building impactful, efficient solutions across web and AI platforms. With hands on experience in fullstack development, machine learning, and real time applications, I thrive in dynamic environments that encourage continuous learning and innovation. I’m always eager to grow, lead, and contribute to meaningful projects that align with modern tech trends.
-          </p>
+I’m Ayesha Kousar — a Full Stack Web Developer & AI Engineer who loves blending logic and creativity.
+I build impactful apps, explore intelligent systems, and never stop shipping.          </p>
 
           {/* Dynamic Section */}
           <div className="mt-10">
