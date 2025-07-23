@@ -1,13 +1,19 @@
-import logo from './logo.svg';
+// src/App.js
 import './App.css';
+import './index.css';
 import PortfolioPage from './front';
-import './index.css'; // ✅ Add this line
+import Footer from './footer'; // Make sure Footer.js exists
 
+// App.js or main layout file
 function App() {
   return (
-    <>
-    <PortfolioPage />;
-</>
+    <div className="flex flex-col min-h-screen">
+      {/* No Header */}
+      <main className="flex-grow">
+        <PortfolioPage />
+      </main>
+      <Footer />
+    </div>
   );
 }
 

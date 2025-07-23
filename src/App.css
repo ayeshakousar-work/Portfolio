@@ -1,25 +1,22 @@
 /* src/index.css or App.css */
-*,
-*::before,
-*::after {
+html, body, #root {
+  height: 100%;
   margin: 0;
   padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
-html,
 body {
-  height: 100%;
-  overflow-y: hidden; /* only hide vertical scrolling */
-  overflow-x: hidden;   /* allow horizontal scrolling */
+  display: flex;
+  flex-direction: column;
 }
 
 
-#root {
-  height: 100%;
-  overflow: hidden;
 
-}
+
+
 
 /* Hide scrollbar cross-browser */
 /* Hide scrollbar cross-browser */

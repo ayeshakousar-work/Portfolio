@@ -56,7 +56,7 @@ const PortfolioPage = () => {
               ].map((proj, idx) => (
                 <div
                   key={idx}
-                  className="inline-block min-w-[380px] max-w-[200px] bg-[#fbfdff] rounded-xl shadow-md hover:shadow-xl p-5 transition-all"
+                  className="inline-block w-[90vw] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-[#fbfdff] rounded-xl shadow-md hover:shadow-xl p-5 transition-all"
                 >
                   <h3 className="text-lg font-semibold text-gray-800">{proj.title}</h3>
                   <ul className="text-sm text-gray-600 mt-2 space-y-1 list-disc list-inside">
@@ -95,7 +95,7 @@ const PortfolioPage = () => {
           <div className="bg-[#fbfdff] relative overflow-x-auto no-scrollbar max-h-[calc(100vh-200px)]">
             <div className="flex gap-6  whitespace-nowrap overflow-x-auto no-scrollbar px-2">
 
-              <div className="inline-block w-full max-w-sm bg-[#fbfdff] rounded-2xl shadow-sm hover:shadow-md p-2 transition-all border border-gray-100">
+              <div className="inline-block w-full max-w-sm bg-[#fbfdff] rounded-2xl shadow-sm hover:shadow-md p-6 transition-all  ">
   <h3 className="text-xl font-bold text-gray-900 mb-2"> Education</h3>
 
   <p className="text-base font-semibold text-gray-800">Riphah International University</p>
@@ -121,7 +121,7 @@ const PortfolioPage = () => {
               
 
               {/* Experience Card */}
-              <div className="inline-block w-full max-w-sm bg-[#fbfdff] rounded-2xl shadow-sm hover:shadow-md p-6 transition-all border border-gray-100">
+              <div className="inline-block w-full max-w-sm bg-[#fbfdff] rounded-2xl shadow-sm hover:shadow-md p-6 transition-all ">
   <h3 className="text-xl font-bold text-gray-900 mb-2">Experience</h3>
   
   <p className="text-base font-semibold text-gray-800">Teacher’s Assistant</p>
@@ -169,12 +169,13 @@ const PortfolioPage = () => {
 
         return (
           <div className="bg-[#fbfdff] relative overflow-y-auto max-h-[calc(100vh-200px)] px-4 py-2">
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div className="flex gap-6 overflow-x-auto no-scrollbar whitespace-nowrap px-2">
     {certificates.map((cert, idx) => (
       <div
-        key={idx}
-        className="bg-[#fbfdff] rounded-xl shadow-md hover:shadow-lg p-5 transition-all"
-      >
+  key={idx}
+  className="shrink-0 w-[90vw] sm:w-[300px] md:w-[340px] bg-[#fbfdff] rounded-xl shadow-md hover:shadow-lg p-5 transition-all"
+>
+
         <h3 className="text-lg font-semibold text-gray-900 ">{cert.title}</h3>
         <p className="text-sm text-gray-700 font-medium mt-1">{cert.provider}</p>
         <p className="text-xs text-gray-500 mt-1">{cert.location}</p>
@@ -221,7 +222,7 @@ return (
   <div className="overflow-x-auto pb-2 no-scrollbar ">
     <div className="flex gap-6 flex-nowrap w-max no-scrollbar ">
       {Object.entries(skills).map(([category, items], idx) => (
-        <div key={idx} className="bg-[#fbfdff] rounded-2xl shadow-md hover:shadow-lg p-5 transition-all  flex flex-col gap-3 w-[400px] shrink-0">
+        <div key={idx} className="bg-[#fbfdff] rounded-2xl shadow-md hover:shadow-lg p-5 transition-all  flex flex-col gap-3 w-[90vw] sm:w-[380px] md:w-[400px] shrink-0">
           <h3 className="text-md font-semibold text-gray-800">{category}</h3>
           <div className="flex flex-wrap gap-4">
             {items.map((item, i) => (
@@ -247,11 +248,11 @@ return (
   };
 
 return (
-    <div className="min-h-screen flex flex-col  bg-gradient-to-br from-[#fbfdff] to-[#fbfdff]">
+<div className="box-border flex flex-col bg-gradient-to-br from-[#fbfdff] to-[#fbfdff] m-auto">
       {/* Main layout with sidebar and right panel */}
-      <div className="flex flex-1">
+<div className="flex flex-col md:flex-row flex-1">
         {/* Left Sidebar */}
-<div className="flex-[1] ml-8 flex-shrink-0 bg-gradient-to-br from-[#0e2e2e] to-[#074141] text-white relative z-10 h-[500px]">
+<div className="w-full md:w-1/3 md:ml-8 bg-gradient-to-br from-[#0e2e2e]  to-[#074141] text-white relative z-10 h-[500px]">
           <div className="p-6 flex flex-col items-center space-y-6">
             <img
               src="/new.PNG"
@@ -279,7 +280,7 @@ return (
         </div>
 
         {/* Right Panel */}
-        <div className="flex-[2]  bg-gradient-to-br from-[#fbfdff] to-[#fbfdff] relative ml-4 z-0 p-12 overflow-hidden">
+<div className="flex-1 flex flex-col bg-gradient-to-br from-[#fbfdff] to-[#fbfdff] relative md:ml-4 z-0 p-4 sm:p-8 md:p-10 overflow-hidden">
           <h1 className="text-2xl font-bold">Ayesha Kousar</h1>
           <p className="mt-2 text-sm text-gray-800">
 I’m Ayesha Kousar
@@ -288,9 +289,10 @@ Full Stack Web Developer & AI Engineer (in the making)
 I'm beginning my journey in tech with a solid foundation in web development and AI. Eager to learn, build real-world solutions, and grow into a developer who creates with purpose and precision.        </p>
 
           {/* Dynamic Section */}
-          <div className="mt-10">
-            {renderContent()}
-          </div>
+<div className="mt-5 flex-grow">
+  {renderContent()}
+</div>
+            
         </div>
       </div>
 
@@ -298,27 +300,8 @@ I'm beginning my journey in tech with a solid foundation in web development and 
      
 
 
-      {/* Footer: Apply flex-col to make it vertical */}
-      <footer className="bg-[#0e2e2e] text-white py-6 mt-2 px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <div className="text-sm text-center md:text-left space-y-1">
-          <p>Email</p>
-          <a href="mailto:ayeshakousar.work@gmail.com" className="hover:underline">ayeshakousar.work@gmail.com</a>
-        </div>
-        
-        {/* Links */}
-        <div className="flex space-x-6 items-center">
-          <a href="https://github.com/ayeshakousar-work" target="_blank" rel="noopener noreferrer" className="hover:underline">
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/ayesha-kousar-/" target="_blank" rel="noopener noreferrer" className="hover:underline">
-            LinkedIn
-          </a>
-        <a href="/Ayesha Kousar CV.pdf" download className="bg-white text-[#0e2e2e] px-3 py-1 rounded hover:bg-gray-200 text-sm font-medium">
-  Get Resume
-</a>
+  
 
-        </div>
-      </footer>
     </div>
 
 
