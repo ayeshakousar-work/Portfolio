@@ -90,55 +90,55 @@ const PortfolioPage = () => {
             </div>
           </div>
         );
-      case "Experience & Education":
-        return (
-          <div className="bg-[#fbfdff] relative overflow-x-auto no-scrollbar max-h-[calc(100vh-200px)]">
-            <div className="flex gap-6  whitespace-nowrap overflow-x-auto no-scrollbar px-2">
+     case "Experience & Education":
+  return (
+    <div className="bg-[#fbfdff] relative overflow-x-auto no-scrollbar max-h-[calc(100vh-240px)]">
+      <div className="flex gap-4 whitespace-nowrap overflow-x-auto no-scrollbar px-2 py-4">
 
-              <div className="inline-block w-full max-w-sm bg-[#fbfdff] rounded-2xl shadow-sm hover:shadow-md p-6 transition-all  ">
-  <h3 className="text-xl font-bold text-gray-900 mb-2"> Education</h3>
+        {/* Education Card */}
+        <div className="inline-block w-full max-w-sm bg-[#fbfdff] rounded-2xl shadow-sm hover:shadow-md p-4 transition-all">
+          <h3 className="text-lg font-bold text-gray-900 mb-1">Education</h3>
+          <p className="text-sm font-semibold text-gray-800">BS in Computer Science</p>
+          <p className="text-xs text-gray-500 italic">Riphah International University</p>
+          <p className="text-xs text-gray-600">
+            GPA: 3.98 / 4.00
+          </p>
+          <p className="text-xs text-gray-400">Islamabad, Pakistan • 2021–2025</p>
 
-  <p className="text-base font-semibold text-gray-800">Riphah International University</p>
-  <p className="text-sm text-gray-500 italic">BS in Computer Science</p>
-  <p className="text-sm text-gray-600">
-    GPA: <span className="font-medium text-gray-800">3.98 / 4.00</span>
-  </p>
-  <p className="text-sm text-gray-400 mb-4">Islamabad, Pakistan • 2021–2025</p>
-
-  <div>
-    <p className="text-sm text-gray-900 font-semibold mb-2"> Coursework</p>
-    <ul className="text-sm text-gray-700 list-disc list-inside space-y-1">
-      {[
-        "Artificial Intelligence", "Computer Vision", "Data Structures",
-        "Database", "Web And App Development"
-      ].map((course, i) => (
-        <li key={i}>{course}</li>
-      ))}
-    </ul>
-  </div>
-</div>
-
-              
-
-              {/* Experience Card */}
-              <div className="inline-block w-full max-w-sm bg-[#fbfdff] rounded-2xl shadow-sm hover:shadow-md p-6 transition-all ">
-  <h3 className="text-xl font-bold text-gray-900 mb-2">Experience</h3>
-  
-  <p className="text-base font-semibold text-gray-800">Teacher’s Assistant</p>
-  <p className="text-sm text-gray-500">Riphah International University</p>
-  <p className="text-sm text-gray-500">Islamabad, Pakistan</p>
-  <p className="text-sm text-gray-400 mb-4">Sep 2024 – May 2025</p>
-  
-  <ul className="text-sm text-gray-700 list-disc list-inside space-y-1">
-    <li>Assisted lead teachers with class schedules.</li>
-    <li>Graded assignments and tracked student progress.</li>
-    <li>Provided individual student support for learning.</li>
-  </ul>
-</div>
-
-            </div>
+          <div className="mt-2">
+            <p className="text-xs text-gray-900 font-semibold mb-1">Coursework</p>
+            <ul className="text-xs text-gray-700 list-disc list-inside space-y-0.5">
+              {[
+                "Artificial Intelligence", "Computer Vision", "Data Structures",
+                "Database", "Web And App Development"
+              ].map((course, i) => (
+                <li key={i}>{course}</li>
+              ))}
+            </ul>
           </div>
-        );
+        </div>
+
+        {/* Experience Card */}
+        <div className="inline-block w-full max-w-sm bg-[#fbfdff] rounded-2xl shadow-sm hover:shadow-md p-4 transition-all">
+          <h3 className="text-lg font-bold text-gray-900 mb-1">Experience</h3>
+          <p className="text-sm font-semibold text-gray-800">Teacher’s Assistant</p>
+          <p className="text-xs text-gray-500 italic">Riphah International University</p>
+          <p className="text-xs text-gray-500">Islamabad, Pakistan</p>
+          <p className="text-xs text-gray-400">Sep 2024 – May 2025</p>
+                    <div className="mt-2">
+
+          <ul className="text-xs text-gray-700 list-disc list-inside space-y-0.5">
+            <li>Assisted lead teachers with class schedules.</li>
+            <li>Graded assignments and tracked student progress.</li>
+            <li>Provided individual student support for learning.</li>
+          </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  );
+
       case "Certifications":
         const certificates = [
           {
@@ -168,14 +168,13 @@ const PortfolioPage = () => {
         ];
 
         return (
-          <div className="bg-[#fbfdff] relative overflow-y-auto max-h-[calc(100vh-200px)] px-4 py-2">
-<div className="flex gap-6 overflow-x-auto no-scrollbar whitespace-nowrap px-2">
+         <div className="bg-[#fbfdff] relative overflow-y-auto max-h-[calc(100vh-200px)] px-4 py-2">
+<div className="flex sm:grid flex-nowrap sm:grid-cols-2  gap-4 overflow-x-auto sm:overflow-visible no-scrollbar px-4">
     {certificates.map((cert, idx) => (
       <div
-  key={idx}
-  className="shrink-0 w-[90vw] sm:w-[300px] md:w-[340px] bg-[#fbfdff] rounded-xl shadow-md hover:shadow-lg p-5 transition-all"
->
-
+        key={idx}
+        className="bg-[#fbfdff] rounded-xl shadow-md hover:shadow-lg p-5 transition-all"
+      >
         <h3 className="text-lg font-semibold text-gray-900 ">{cert.title}</h3>
         <p className="text-sm text-gray-700 font-medium mt-1">{cert.provider}</p>
         <p className="text-xs text-gray-500 mt-1">{cert.location}</p>
