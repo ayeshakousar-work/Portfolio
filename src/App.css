@@ -6,12 +6,14 @@ html, body, #root {
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
+  background-color: #fbfdff;
 }
 
 body {
   display: flex;
   flex-direction: column;
 }
+
 
 
 

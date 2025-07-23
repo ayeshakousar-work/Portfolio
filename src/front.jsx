@@ -17,7 +17,7 @@ const PortfolioPage = () => {
       case "Projects":
         return (
           <div className="bg-[#fbfdff] relative overflow-x-auto no-scrollbar max-h-[calc(120vh-200px)]">
-            <div className="flex gap-6 py-4 whitespace-nowrap overflow-x-auto no-scrollbar px-2">
+            <div className="flex gap-6 py-6 whitespace-nowrap overflow-x-auto no-scrollbar px-2">
 
               {[
                 {
@@ -56,7 +56,7 @@ const PortfolioPage = () => {
               ].map((proj, idx) => (
                 <div
                   key={idx}
-                  className="inline-block w-[90vw] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-[#fbfdff] rounded-xl shadow-md hover:shadow-xl p-5 transition-all"
+                  className="inline-block w-[90vw] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-[#fbfdff] rounded-xl shadow-md hover:shadow-xl p-6 transition-all"
                 >
                   <h3 className="text-lg font-semibold text-gray-800">{proj.title}</h3>
                   <ul className="text-sm text-gray-600 mt-2 space-y-1 list-disc list-inside">
